@@ -23,7 +23,7 @@ public class DemoApplication {
     	Person p = null;
     	while(this.repository.findAll().iterator().hasNext()){
        p = this.repository.findAll().iterator().next();}
-        return "Hello " + p.getName() + "!";
+        return "Hello " + p.getName() + "!"+"\n";
     }
 
     public static void main(String[] args) throws Exception {
