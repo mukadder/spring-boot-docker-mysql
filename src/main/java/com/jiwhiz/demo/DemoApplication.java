@@ -20,9 +20,10 @@ public class DemoApplication {
 
     @RequestMapping("/")
     public String home() {
+    	while(this.repository.findAll().iterator().hasNext()){
         Person p = this.repository.findAll().iterator().next();
         return "Hello " + p.getName() + "!";
-    }
+    }}
 
     public static void main(String[] args) throws Exception {
         SpringApplication.run(DemoApplication.class, args);
