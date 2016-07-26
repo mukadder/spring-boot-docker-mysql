@@ -20,10 +20,8 @@ public class DemoApplication {
 
     @RequestMapping("/")
     public String home() {
-    	Person p = null;
-    	while(this.repository.findAll().iterator().hasNext()){
-       p = this.repository.findAll().iterator().next();}
-        return "Hello " + p.getName() + "!"+"\n";
+        Person p = this.repository.findAll().iterator().next();
+        return "Hello " + p.getName() + "!";
     }
 
     public static void main(String[] args) throws Exception {
